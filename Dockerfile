@@ -12,9 +12,9 @@ RUN apt-get update -y && \
     apt-get remove --purge curl -y && \
     apt-get clean
 
-RUN mkdir -p /data/www
+RUN mkdir -p /data/www/api
 VOLUME ["/data"]
-WORKDIR /data/www
+WORKDIR /data/www/api
 
 ENTRYPOINT ["composer"]
 CMD ["--help"]
